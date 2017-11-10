@@ -1,0 +1,15 @@
+
+<div class="text-center padded content">
+
+  <h1>Below all the cocktails list</h1>
+
+
+  <% @cocktails.each do |cocktail| %>
+    <p>
+    <%= link_to cocktail.name, cocktail_path(cocktail), class: "btn btn-default" %>
+    </p>
+  <% end %>
+
+
+  <%= link_to "Create a cocktail", new_cocktail_path, class: "btn btn-success" %>
+</div>
